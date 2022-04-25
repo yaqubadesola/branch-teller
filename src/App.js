@@ -256,20 +256,20 @@ library.add(
 );
 
 const store = configureStore();
-// const theme = createMuiTheme({
-//   palette: {
-//       type: 'light', 
-//       // // primary:{
-//       // //   light:"#00000",
-//       // //   main: "#fff453"
-//       // }
+const theme = createMuiTheme({
+  palette: {
+      type: 'light', 
+      primary:{
+        light:"#00000",
+        main: "#fff453"
+      }
 
-//   },
-// });
+  },
+});
 class App extends Component {
   render() {
     return (
-      // <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
         <Provider  store={store}>
           <BrowserRouter basename="/branch-teller/">
             <CssBaseline />
@@ -278,7 +278,7 @@ class App extends Component {
             </ScrollToTop>
           </BrowserRouter>
         </Provider>
-      // </ThemeProvider>
+      </ThemeProvider>
         
     );
   }

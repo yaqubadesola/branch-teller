@@ -17,9 +17,11 @@ import ReceiptIcon from '@material-ui/icons/ReceiptOutlined';
 import SettingsIcon from '@material-ui/icons/SettingsOutlined';
 import ViewModuleIcon from '@material-ui/icons/ViewModule';
 import AccountBalanceOutlinedIcon from '@material-ui/icons/AccountBalanceOutlined';
+import InputIcon from '@material-ui/icons/Input';
 var iconsMap = {
   BarChartIcon: BarChartIcon,
   CalendarTodayIcon: CalendarTodayIcon,
+  InputIcon:InputIcon,
   ChatIcon: ChatIcon,
   CodeIcon: CodeIcon,
   DashboardIcon: DashboardIcon,
@@ -51,8 +53,8 @@ export default [
           {
             "label": "New Investment",
             "description": "This is a dashboard page example built using this template.",
-            "to": "/DashboardDefault",
-            "icon": "AccountBalanceOutlinedIcon"
+            "to": "/NewInvestment",
+            "icon": "InputIcon"
           },
           {
             "label": "Liquidate Investment",

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { ListItem, Button, Collapse } from '@material-ui/core';
 
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
-
+import '../Sidebar/sideBar.css';
 const CustomRouterLink = forwardRef(function CustomLink(props, ref) {
   return (
     <div ref={ref} style={{ flexGrow: 1 }}>
@@ -41,6 +41,13 @@ const SidebarMenuListItem = props => {
   }
   const style = {
     paddingLeft,
+    color:"#fff",
+    background:"none",
+    hover: {
+      "&:hover": {
+        color: '#00',
+      }
+    }
   };
 
   if (children) {
@@ -54,7 +61,7 @@ const SidebarMenuListItem = props => {
           className={clsx('app-sidebar-button', { active: open })}
           onClick={handleToggle}
           style={style}>
-          <span>{title}</span>
+          <span className='textlink'>{title}</span>
           {open ? (
             <ExpandLessIcon style={{ fontSize: 80 }} className="sidebar-expand-icon" color="inherit" />
           ) : (

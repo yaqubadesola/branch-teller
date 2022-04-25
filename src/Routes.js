@@ -26,6 +26,7 @@ import RegularTables4 from './example-pages/RegularTables4';
 import FormsControls from './example-pages/FormsControls';
 
 const DashboardDefault = lazy(() => import('./example-pages/DashboardDefault'));
+const NewInvestment = lazy(() => import('./example-pages/NewInvestment'));
 const Cards3 = lazy(() => import('./example-pages/Cards3'));
 const LandingPage = lazy(() => import('./example-pages/LandingPage'));
 const Accordions = lazy(() => import('./example-pages/Accordions'));
@@ -92,6 +93,7 @@ const Routes = () => {
             <Route
               path={[
                 '/DashboardDefault',
+                '/NewInvestment',
                 '/Buttons',
                 '/Dropdowns',
                 '/NavigationMenus',
@@ -126,6 +128,7 @@ const Routes = () => {
                       path="/DashboardDefault"
                       component={DashboardDefault}
                     />
+                    <Route path="/NewInvestment" component={NewInvestment} />
                     <Route path="/Buttons" component={Buttons} />
                     <Route path="/Dropdowns" component={Dropdowns} />
                     <Route

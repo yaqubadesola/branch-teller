@@ -1,3 +1,14 @@
 .app-sidebar-wrapper{
     background-color: #3D414C !important;
 }
+button.app-sidebar-button.active, button.app-sidebar-button:hover {
+    color: #000;
+}
+button.app-sidebar-button{
+    color: #000;
+}
+
+.app-sidebar-button.textlink:hover {
+    color: #3D414C;
+    background: #eeeff8;
+}

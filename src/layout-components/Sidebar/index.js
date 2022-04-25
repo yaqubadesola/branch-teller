@@ -14,13 +14,17 @@ import navItems from './navItems';
 
 import { makeStyles } from '@material-ui/core/styles';
 import { setSidebarToggleMobile } from '../../reducers/ThemeOptions';
-import './sideBar.css'
+
 
 const useStyles = makeStyles({
   root: {
     background: '#3D414C',
     color:"#fff"
   },
+  paper: {
+    background: 'black',
+    color: 'white'
+  }
 });
 
 const Sidebar = props => {
@@ -65,6 +69,7 @@ const Sidebar = props => {
 
       <Hidden mdDown>
         <Paper
+          classes={{ paper: classes.paper }}
           className={clsx('app-sidebar-wrapper', {
             'app-sidebar-wrapper-fixed': sidebarFixed
           })}
