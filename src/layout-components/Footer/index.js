@@ -18,35 +18,18 @@ const Footer = props => {
         <div className="app-footer--inner">
           <div className="app-footer--first">
             <List dense className="d-flex align-items-center">
-              <ListItem
-                className="rounded-sm text-nowrap"
-                button
-                component="a"
-                href="https://uifort.com/template/carolina-react-admin-dashboard-material-ui-free"
-                target="_blank"
-                rel="noopener">
-                <ListItemText primary="Download now" />
-              </ListItem>
-              <ListItem
-                className="rounded-sm text-nowrap"
-                button
-                component="a"
-                href="https://uifort.com/template/carolina-react-admin-dashboard-material-ui-pro"
-                target="_blank"
-                rel="noopener">
-                <ListItemText primary="View PRO Version" />
-              </ListItem>
+             
             </List>
           </div>
           <div className="app-footer--second">
-            <span>Carolina React Admin Dashboard with Material-UI Free</span> ©
-            2020 - crafted with <span className="text-danger px-1">❤</span> by{' '}
+            <span>Branch Teller Module</span> ©
+            2022 - crafted with <span className="text-danger px-1">❤</span> by{' '}
             <a
-              href="https://uifort.com"
+              href="m36ng.com"
               rel="noopener"
               target="_blank"
-              title="UiFort.com">
-              UiFort.com
+              title="Digital Venture">
+             Digital Venture
             </a>
           </div>
         </div>

@@ -6,7 +6,8 @@ import Routes from './Routes';
 import ScrollToTop from './utils/ScrollToTop';
 import './assets/base.scss';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { createMuiTheme, ThemeProvider} from '@material-ui/core';
+import { ThemeProvider} from '@material-ui/core';
+import { createTheme } from '@material-ui/core/styles'
 import merge from 'lodash/merge';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -256,12 +257,20 @@ library.add(
 );
 
 const store = configureStore();
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
       type: 'light', 
       primary:{
         light:"#00000",
         main: "#fff453"
+      },
+      overrides: {
+        MuiButton: {
+          raisedPrimary: {
+            color: 'white',
+            background: "black"
+          },
+        },
       }
 
   },

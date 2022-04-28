@@ -1,7 +1,7 @@
 import { blueGrey } from "@material-ui/core/colors";
 
 export const styles = {
-  formContainer: {
+  container: {
     display: "flex",
     flexFlow: "row Wrap",
     justifyContent: "center",
@@ -14,7 +14,7 @@ export const styles = {
     minHeight: "350px",
     height: "auto",
   },
-  formTitle: {
+  title: {
     color: blueGrey[700],
     textAlign: "center",
     margin: "10px 0px 30px 0px",
@@ -23,4 +23,18 @@ export const styles = {
   steps: {
     padding: "16px",
   },
+
+  container :{
+    display: "flex",
+    alignItems: 'center'
+  },
+  
+  dividerBorder :{
+    bordeBottom: "1px solid black",
+    width: "100%"
+  },
+  
+  content : {
+    padding: "0 10px 0 10px",
+  }
 };

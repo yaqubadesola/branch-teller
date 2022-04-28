@@ -1,10 +1,11 @@
-import { createMuiTheme } from '@material-ui/core';
+//import { createMuiTheme } from '@material-ui/core';
+import { createTheme } from '@material-ui/core/styles'
 import typography from './typography';
 
 /* eslint-disable import/no-unresolved, import/no-webpack-loader-syntax */
 import vars from '!!sass-vars-to-js-loader!../assets/core/_variables-mui.scss';
 
-const MuiTheme = createMuiTheme({
+const MuiTheme = createTheme({
   palette: {
     primary: {
       main: vars.primary

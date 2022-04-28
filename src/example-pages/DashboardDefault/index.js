@@ -10,8 +10,8 @@ export default function DashboardDefault() {
   return (
     <Fragment>
       <PageTitle
-        titleHeading="Default"
-        titleDescription="This is a dashboard page example built using this template."
+        titleHeading="Dashboard"
+        titleDescription="View all investments statistics analysis."
       />
 
       <DashboardDefaultSection1 />

@@ -8,72 +8,58 @@ import {
   renderText,
 } from "../common/DisplayComponent";
 
+import { makeStyles } from '@material-ui/core/styles';
+const useStyles = makeStyles(() => ({
+  input1: {
+    height: 50
+  },
+  input2: {
+    height: 200,
+    fontSize: "3em"
+  },
+  grid: {
+    height: "100%"
+  }
+}));
 const Step1 = ({ state, handleChange, handleNext }) => {
+  
+const classes = useStyles();
   return (
     <Paper style={styles.steps}>
-      <Box mt={2} mb={2}>
+      <Box mt={1} mb={10}>
         {renderText({
-          label: "Please Fill personal Data",
-          type: "h6",
+          label: "Kindly enter your BVN to get Started!",
+          type: "h3",
           color: "textPrimary",
           align: "center",
+          InputProps:{ classes: { input: classes.input1 } }, 
         })}
       </Box>
 
-      <Grid container spacing={1} style={{ marginBottom: "16px" }}>
-        <Grid item xs={12} sm={6}>
+      <Grid container direction="column" spacing={0} >
+        <Grid item 
+              className={classes.grid}
+              container
+              justifyContent="center"  
+              alignItems="center"
+              fullWidth
+        >
+        <Box  display="flex" width={500} height={80} >
           {renderInputField({
             state,
-            name: "firstName",
-            label: "First Name",
+            name: "bvn",
+            label: "Enter BVN Number",
+            fullWidth:true,
             onChange: handleChange,
           })}
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          {renderInputField({
-            state,
-            name: "lastName",
-            label: "Last Name",
-            onChange: handleChange,
-          })}
-        </Grid>
-      </Grid>
-      <Grid container spacing={1} style={{ marginBottom: "16px" }}>
-        <Grid item xs={12}>
-          {renderSelect({
-            state,
-            name: "gender",
-            label: "Gender",
-            options: [
-              { key: "Male", value: "male" },
-              { key: "Female", value: "female" },
-            ],
-            onChange: handleChange,
-          })}
-        </Grid>
-      </Grid>
-      <Grid container spacing={1} style={{ marginBottom: "16px" }}>
-        <Grid item xs={12} sm={6}>
-          {renderInputField({
-            state,
-            name: "phone",
-            label: "Phone",
-            onChange: handleChange,
-          })}
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          {renderInputField({
-            state,
-            name: "email",
-            label: "Email",
-            type: "email",
-            onChange: handleChange,
-          })}
+        </Box>
         </Grid>
       </Grid>
 
-      <Grid container component={Box} justify='flex-end' mt={2} p={2}>
-        {renderButton({ label: "Next", onClick: handleNext })}
+      <Grid container component={Box}  justifyContent="center"  alignItems="center" style={{ marginTop: "-10px",marginBottom: "25px" }} mt={2} p={2}>
+        <Box display="flex"  width={500} height={60} >
+          {renderButton({ label: "Continue", variant:"contained", custom: true, fullWidth:true, onClick: handleNext })}
+        </Box>        
       </Grid>
     </Paper>
   );

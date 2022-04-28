@@ -12,6 +12,7 @@ import {
 import Step1 from "./Steps/step1";
 import Step2 from "./Steps/step2";
 import Step3 from "./Steps/step3";
+import Step4 from "./Steps/step4";
 import FinalStep from "./Steps/FinalStep";
 import { renderText } from "./common/DisplayComponent";
 import { styles } from "./common/styles";
@@ -39,7 +40,6 @@ class FormComponent extends Component {
     steps: [
       { label: "Collect BVN" },
       { label: "Validate Data" },
-      { label: "Professional" },
       { label: "Investment" },
       { label: "Buy Investment" },
       { label: "Request Approval" },
@@ -140,8 +140,9 @@ class FormComponent extends Component {
                   </Step>
                 ))}
               </Stepper>
+              {getStepContent(this.state.stepCount)}
             </Paper>
-            {getStepContent(this.state.stepCount)}
+            
           </form>
         </Grid>
       </Grid>
